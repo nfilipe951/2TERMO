@@ -1,0 +1,317 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Entidade: \cf2\b0 Clientes\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : clientes
+\par relacionamento entre: clientes e veivulos
+\par cardinalidade: 1,1 e 1,1 \f0 
+\par \cf1\b 002 - Entidade: \cf2\b0 Marcas\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : marcas
+\par relacionamento entre: marcas e veiculos e marcas e modelos
+\par cardinalidade: 1,1 e 1,1              1,n  e 1,1
+\par \f0 
+\par \cf1\b 003 - Atributo: \cf2\b0 ano\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de veiculos
+\par tipo de dados: date
+\par 
+\par \cf1\b 004 - Atributo: \cf2\b0 ano\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de marcas
+\par tipo de dados: date
+\par 
+\par \cf1\b 005 - Atributo: \cf2\b0 cargo\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de funcionarios
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 006 - Atributo: \cf2\b0 categoria\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de marcas
+\par tipo de dados: varchar(50)
+\par 
+\par \cf1\b 007 - Rela\f1\'e7\'e3o: \cf2\b0 compra\cf1\b 
+\par \cf0\b0\f0 relac\f1\'e3o entre clientes e veiculos
+\par \f0 
+\par \cf1\b 008 - Atributo: \cf2\b0 comprovante\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pagamentos
+\par tipo de dados: varchar(60)
+\par 
+\par \cf1\b 009 - Rela\f1\'e7\'e3o: \cf2\b0 contem\cf1\b 
+\par \cf0\b0\f0 rela\f1\'e7\'e3o entre marcas e veiculos
+\par \f0 
+\par \cf1\b 010 - Atributo: \cf2\b0 cor\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de veiculos
+\par tipo de dados: varchar(40)
+\par 
+\par \cf1\b 011 - Atributo: \cf2\b0 cor_modelo\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7o
+\par tipo de dados: varchar(20)
+\par \f0 
+\par \cf1\b 012 - Atributo: \cf2\b0 cpf\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico do cliente
+\par tipo de dados: varchar(14) 
+\par \cf1\b 013 - Atributo: \cf2\b0 cpf\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de funcionarios
+\par tipo de dados: varchar(14)
+\par 
+\par \cf1\b 014 - Rela\f1\'e7\'e3o: \cf2\b0 cria\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 015 - Atributo: \cf2\b0 data_de_recibo\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de fornecedores
+\par tipo de dados: datetime
+\par 
+\par \cf1\b 016 - Atributo: \cf2\b0 data_hora\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de servicos
+\par tipo de dados: datetime
+\par 
+\par \cf1\b 017 - Atributo: \cf2\b0 data_lancamento\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7o
+\par tipo de dados: datetime \f0 
+\par \cf1\b 018 - Atributo: \cf2\b0 data_pagamento\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pagamentos
+\par tipo de dados: datetime
+\par 
+\par \cf1\b 019 - Rela\f1\'e7\'e3o: \cf2\b0 efetua\cf1\b 
+\par \cf0\b0\f0 rela\f1\'e7\'e3o entre clientes e pagamentos 
+\par \f0 
+\par \cf1\b 020 - Atributo: \cf2\b0 email\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico do cliente
+\par tipo de dado: varchar(30)
+\par fun\f1\'e7\'e3o: not null
+\par \f0 
+\par \cf1\b 021 - Atributo: \cf2\b0 forma_pagamento\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pagamentos
+\par tipo de dados: varchar(15)
+\par 
+\par \cf1\b 022 - Rela\f1\'e7\'e3o: \cf2\b0 fornece\cf1\b 
+\par \cf0\b0\f0 rela\f1\'e7\'e3o entre pecas e fornecedores
+\par \f0 
+\par \cf1\b 023 - Entidade: \cf2\b0 fornecedores\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : fornecedores
+\par relacionamento entre: fornecedores e pecas 
+\par cardinalidade: 1,n e 1,n
+\par \f0 
+\par \cf1\b 024 - Entidade: \cf2\b0 funcionarios\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : funcionarios
+\par relacionamento entre: funcionario e clientes
+\par cardinalidade: 1,n e 1,n
+\par \f0 
+\par \cf1\b 025 - Atributo: \cf2\b0 garantia\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de modelos
+\par tipo de dados: datetime
+\par 
+\par \cf1\b 026 - Rela\f1\'e7\'e3o: \cf2\b0 gera\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 027 - Atributo: \cf2\b0 id_clientes\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico do cliente
+\par tipo de dados: int increment primary key 
+\par 
+\par \cf1\b 028 - Atributo: \cf2\b0 id_fornecedores\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de fornecedores
+\par tipo de dados: int increment primary key
+\par 
+\par \cf1\b 029 - Atributo: \cf2\b0 id_funcionarios\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de funcionarios
+\par tipo de dados: int increment primary key
+\par 
+\par \cf1\b 030 - Atributo: \cf2\b0 id_marcas\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de marcas
+\par tipo de dados: int increment prrimary  key
+\par 
+\par \cf1\b 031 - Atributo: \cf2\b0 id_modelo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 032 - Atributo: \cf2\b0 id_ordem\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7o
+\par tipo de dados: int increment primary key
+\par \f0 
+\par \cf1\b 033 - Atributo: \cf2\b0 id_pagamentos\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pagamentos
+\par tipo de dados: int increment primary key
+\par 
+\par \cf1\b 034 - Atributo: \cf2\b0 id_pecas\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pecas
+\par tipo de dados: int increment primary key
+\par 
+\par \cf1\b 035 - Atributo: \cf2\b0 id_servicos\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de servicos
+\par tipo de dados: int increment primary key
+\par 
+\par \cf1\b 036 - Atributo: \cf2\b0 id_veiculos\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico do cliente
+\par tipo de dados: int increment primary key
+\par 
+\par \cf1\b 037 - Atributo: \cf2\b0 idade\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico do cliente
+\par tipo de dados: int
+\par 
+\par \cf1\b 038 - Atributo: \cf2\b0 ip\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pecas
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 039 - Atributo: \cf2\b0 localizacao\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de servicos
+\par tipo de dados: varchar(60)
+\par 
+\par \cf1\b 040 - Atributo: \cf2\b0 localizacao\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de fornecedores
+\par tipo de dados: varchar(200)
+\par 
+\par \cf1\b 041 - Atributo: \cf2\b0 localizacao\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pecas
+\par tipo de dados: varchar(200)
+\par 
+\par \cf1\b 042 - Atributo: \cf2\b0 medidas\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pecas
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 043 - Entidade: \cf2\b0 modelos\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : modelos 
+\par relacionamento entre: modelos e marcas
+\par cardinalidade: 1,1 e 1,1
+\par \f0 
+\par \cf1\b 044 - Atributo: \cf2\b0 nome\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pecas
+\par tipo de dados: varchar(60)
+\par 
+\par \cf1\b 045 - Atributo: \cf2\b0 nome\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico do cliente
+\par tipo de dados: varchar(14)
+\par fun\f1\'e7\'e3o: not null
+\par \f0 
+\par \cf1\b 046 - Atributo: \cf2\b0 nome\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de funcionarios
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 047 - Atributo: \cf2\b0 nome\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de fornecedores
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 048 - Atributo: \cf2\b0 nome_cliente\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7os
+\par tipo de dados: varchar(100)
+\par \f0 
+\par \cf1\b 049 - Atributo: \cf2\b0 nome_marca\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de marcas
+\par tipo de dados: varchar(60)
+\par 
+\par \cf1\b 050 - Atributo: \cf2\b0 nome_modelo\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7o
+\par tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 051 - Atributo: \cf2\b0 nome_responsavel\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de veiculos
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 052 - Atributo: \cf2\b0 nome_responsavel\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de servicos
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 053 - Atributo: \cf2\b0 nome_servico\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de servicos
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 054 - Rela\f1\'e7\'e3o: \cf2\b0 obtem\cf1\b 
+\par \cf0\b0\f0 rela\f1\'e7\'e3o entre marcas e modelos 
+\par \f0 
+\par \cf1\b 055 - Entidade: \cf2\b0 ordem_de_servicos\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : ordem de servicos
+\par relacionamento entre: ordem de servicos e servicos, ordem de servicos e pagamentos
+\par cardinalidade: 1,n e 1,n , 1,1 e 1,n
+\par \f0 
+\par \cf1\b 056 - Entidade: \cf2\b0 pagamentos\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : pagamentos
+\par relacionamento entre: pagamentos e clientes , pagamentos e ordem de servicos
+\par cardinalidade: 1,1 e 1,1    ,      1,n  e  1,1
+\par \f0 
+\par \cf1\b 057 - Entidade: \cf2\b0 pecas\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : pecas
+\par relacionamento entre: pecas e fornecedores 
+\par cardinalidade: 1,n e 1,n
+\par \f0 
+\par \cf1\b 058 - Atributo: \cf2\b0 placa\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de marcas
+\par tipo de dados: varchar(20)
+\par 
+\par \cf1\b 059 - Atributo: \cf2\b0 placa\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de veiculos
+\par tipo de dados: varchar(20)
+\par 
+\par \cf1\b 060 - Atributo: \cf2\b0 problema\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7o
+\par tipo de dados: text(500)
+\par \f0 
+\par \cf1\b 061 - Atributo: \cf2\b0 produto\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de fornecedores
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 062 - Atributo: \cf2\b0 quantidade\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de fornecedores
+\par tipo de dados: int 
+\par \cf1\b 063 - Atributo: \cf2\b0 quantidade\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de servicos
+\par tipo de dados: int
+\par 
+\par \cf1\b 064 - Atributo: \cf2\b0 quilometragem\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de veiculos
+\par tipo de dados: varchar(100)
+\par 
+\par \cf1\b 065 - Rela\f1\'e7\'e3o: \cf2\b0 realiza\cf1\b 
+\par \cf0\b0\f0 rela\f1\'e7\'e3o entre servicos e funcionarios 
+\par \f0 
+\par \cf1\b 066 - Entidade: \cf2\b0 servicos\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : servicos
+\par relacionamento entre: servicos e funcionarios , servicos e ordem de servicos
+\par cardinalidade:1,n e 1,n  ,  1,n e 1,n
+\par \f0 
+\par \cf1\b 067 - Atributo: \cf2\b0 status_pagamento\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pagamentos
+\par tipo de dados: varchar(50)
+\par 
+\par \cf1\b 068 - Atributo: \cf2\b0 telefone\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico do cliente
+\par tipo de dados: varchar(14)
+\par fun\f1\'e7\'e3o: not null \f0 
+\par \cf1\b 069 - Atributo: \cf2\b0 telefone\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de funcionarios
+\par tipo de dados: varchar(!4)
+\par 
+\par \cf1\b 070 - Atributo: \cf2\b0 telefone_cliente\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7o
+\par tipo de dados: varchar(14)
+\par \f0 
+\par \cf1\b 071 - Atributo: \cf2\b0 tipo_servico\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7o
+\par tipo de dados: varchar(50)
+\par \f0 
+\par \cf1\b 072 - Atributo: \cf2\b0 turno\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de funcionarios
+\par tipo de dados: varchar(60)
+\par 
+\par \cf1\b 073 - Atributo: \cf2\b0 valor\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7o
+\par tipo de dados: decimal
+\par \f0 
+\par \cf1\b 074 - Atributo: \cf2\b0 valor\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pecas
+\par tipo de dados: not null decimal
+\par 
+\par \cf1\b 075 - Atributo: \cf2\b0 valor\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de fornecedores
+\par tipo de dados: not null decimal
+\par 
+\par \cf1\b 076 - Atributo: \cf2\b0 valor_modelo\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de ordem de servi\f1\'e7o
+\par tipo de dados: decimal
+\par \f0 
+\par \cf1\b 077 - Atributo: \cf2\b0 valor_tabela\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de marcas
+\par tipo de dados: decimal
+\par 
+\par \cf1\b 078 - Atributo: \cf2\b0 valor_total\cf1\b 
+\par \cf0\b0 obs: atributo responsavel por armazenar dado fisico de pagamentos
+\par tipo de dados: not null decimal
+\par 
+\par \cf1\b 079 - Entidade: \cf2\b0 veiculos\cf1\b 
+\par \cf0\b0 Tabela responsavel por organizar as informa\f1\'e7\'f5es sobre : veiculos
+\par relacionamento entre: veiculos, clientes e marcas
+\par cardinalidade: 1,1 e 1,1 
+\par \f0 
+\par 
+\par }
+ 
