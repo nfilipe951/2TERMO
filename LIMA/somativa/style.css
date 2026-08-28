@@ -1,0 +1,164 @@
+
+body {
+    background-color: white;
+    color: grey;
+}
+
+header {
+    background-color: grey;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+h2 {
+    color: grey;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* .img-container {
+    text-align: center;
+    margin-bottom: 15px;
+} */
+
+.espaco {
+    margin-top: 15px;
+}
+
+#sobre h3 {
+    color: grey;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.card-servico {
+    background-color: #eaf2f8;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.card-servico h3 {
+    color: grey;
+    margin-bottom: 5px;
+}
+
+.card-equipe {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* .card-equipe img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+} */
+
+.card-equipe h3 {
+    color: #1e3a5f;
+    margin-bottom: 5px;
+}
+
+.card-equipe .cargo {
+    margin-bottom: 10px;
+}
+
+.card-projeto {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.card-projeto h3 {
+    color: #1e3a5f;
+    margin-bottom: 5px;
+}
+
+.subtitulo-contato {
+    margin-bottom: 15px;
+}
+
+.info-contato p {
+    margin-bottom: 10px;
+}
+
+.link-contato {
+    color: #1e3a5f;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.btn-orcamento {
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+/* section img {
+    display: block;
+    width: 350px;
+    max-width: 100%;
+    
+} */
+
+img {
+    display: inline-block;
+    width: 100px;
+    max-width: 100%;
+    margin: 0;
+}
