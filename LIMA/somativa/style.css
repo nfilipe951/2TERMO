@@ -2,94 +2,99 @@
 body {
     background-color: white;
     color: grey;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     background-color: grey;
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 25px 10px;
 }
 
 header h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
 header p {
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 8px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 90%;
+    max-width: 950px;
+    margin: 20px auto;
 }
 
 section {
-    background-color: white;
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 4px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 25px;
 }
 
 h2 {
     color: grey;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* .img-container {
-    text-align: center;
-    margin-bottom: 15px;
-} */
+/* primeira imagem  */
+#inicio img {
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 350px; 
+    width: 100%;
+    height: auto;
+}
 
-.espaco {
-    margin-top: 15px;
+#inicio p, #sobre p {
+    margin-bottom: 10px;
 }
 
 #sobre h3 {
-    color: grey;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    color: #1e3a5f;
+    margin-top: 15px;
+    margin-bottom: 8px;
 }
 
 .card-servico {
     background-color: #eaf2f8;
     padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 4px;
+    margin-bottom: 12px;
 }
 
 .card-servico h3 {
-    color: grey;
+    color: #1e3a5f;
     margin-bottom: 5px;
 }
 
 .card-equipe {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 12px;
     text-align: center;
-    border-radius: 4px;
 }
 
-/* .card-equipe img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-} */
+
+.card-equipe img {
+    display: block;
+    margin: 0 auto 10px auto;
+    max-width: 180px; 
+    width: 100%;
+    height: auto;
+}
 
 .card-equipe h3 {
     color: #1e3a5f;
@@ -97,68 +102,64 @@ h2 {
 }
 
 .card-equipe .cargo {
-    margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .card-projeto {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
     padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 4px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+
+.card-projeto img {
+    display: block;
+    margin: 0 auto 12px auto;
+    max-width: 200px; 
+    width: 100%;
+    height: auto;
 }
 
 .card-projeto h3 {
-    color: #1e3a5f;
+    color: grey;
     margin-bottom: 5px;
-}
-
-.subtitulo-contato {
-    margin-bottom: 15px;
 }
 
 .info-contato p {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .link-contato {
-    color: #1e3a5f;
+    color: grey;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .btn-orcamento {
-    background-color: #1e3a5f;
+    background-color: grey;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 8px 15px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 footer {
-    background-color: #1e3a5f;
+    background-color: grey;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     font-size: 12px;
 }
 
-footer p {
-    margin-bottom: 5px;
-}
 
-/* section img {
-    display: block;
-    width: 350px;
-    max-width: 100%;
-    
-} */
 
-img {
-    display: inline-block;
-    width: 100px;
-    max-width: 100%;
-    margin: 0;
+
+
+
+#inicio, #sobre, #servicos, #equipe, #projetos, #contato {
+    background-color: white;
 }
