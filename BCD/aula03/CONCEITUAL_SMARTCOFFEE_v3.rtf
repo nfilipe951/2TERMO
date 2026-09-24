@@ -1,0 +1,263 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil MS Sans Serif;}{\f1\fnil\fcharset0 MS Sans Serif;}}
+{\colortbl ;\red0\green0\blue255;\red0\green0\blue0;}
+\viewkind4\uc1\pard\cf1\b\f0\fs16 001 - Observa\f1\'e7\'e3o: \cf2\b0 Banco de Dados
+\par Smart coffee\cf1\b 
+\par \cf0\b0\f0 
+\par \cf1\b 002 - Rela\f1\'e7\'e3o: \cf2\b0 atende\cf1\b 
+\par \cf0\b0\f0 Relaciona Funcion\f1\'e1rios e Pedidos. Um funcion\'e1rio pode atender ou registrar v\'e1rios pedidos, enquanto cada pedido \'e9 atendido ou registrado por um \'fanico funcion\'e1rio
+\par possui cardinalidade 1,1 e 1,n
+\par \f0 
+\par \cf1\b 003 - Atributo: \cf2\b0 cargo\cf1\b 
+\par \cf0\b0 Cargo exercido pelo funcion\f1\'e1rio.
+\par \f0 
+\par \cf1\b 004 - Atributo: \cf2\b0 catao\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 005 - Entidade: \cf2\b0 categoria\cf1\b 
+\par \cf0\b0 Armazena as categorias utilizadas para organizar e classificar os produtos da SmartCoffee.
+\par 
+\par \cf1\b 006 - Atributo: \cf2\b0 categoria_\cf1\b 
+\par \cf0\b0 Categoria \f1\'e0 qual o produto pertence.
+\par \f0 
+\par \cf1\b 007 - Rela\f1\'e7\'e3o: \cf2\b0 classifica\cf1\b 
+\par \cf0\b0\f0 Relaciona Categoria e Produto. Uma categoria \f1\'e9 utilizada para classificar os produtos da SmartCoffee.
+\par \f0 
+\par \cf1\b 008 - Entidade: \cf2\b0 clientes\cf1\b 
+\par \cf0\b0 Armazena os dados cadastrais dos clientes na SmartCoffee.
+\par 
+\par \cf1\b 009 - Atributo: \cf2\b0 cnpj\cf1\b 
+\par \cf0\b0 CNPJ do fornecedor.
+\par 
+\par \cf1\b 010 - Atributo: \cf2\b0 comprovante\cf1\b 
+\par \cf0\b0 C\f1\'f3digo ou n\'famero da transa\'e7\'e3o do pagamento, quando existir.
+\par \f0 
+\par \cf1\b 011 - Rela\f1\'e7\'e3o: \cf2\b0 consome\cf1\b 
+\par \cf0\b0\f0 Relaciona Funcion\f1\'e1rios e Estoque. Representa o consumo ou utiliza\'e7\'e3o de insumos do estoque nas atividades da cafeteria.
+\par \f0 
+\par \cf1\b 012 - Rela\f1\'e7\'e3o: \cf2\b0 contem\cf1\b 
+\par \cf0\b0\f0 Relaciona Pedidos e Produtos. Um pedido pode conter v\f1\'e1rios produtos e um produto pode estar presente em v\'e1rios pedidos. 
+\par possui cardinalidade 1,n e 1,n
+\par \f0 
+\par \cf1\b 013 - Atributo: \cf2\b0 cpf\cf1\b 
+\par \cf0\b0 CPF do cliente.
+\par 
+\par \cf1\b 014 - Atributo: \cf2\b0 cpf_funcionario\cf1\b 
+\par \cf0\b0 CPF do funcion\f1\'e1rio.
+\par \f0 
+\par \cf1\b 015 - Atributo: \cf2\b0 data_admissao\cf1\b 
+\par \cf0\b0 Data de admiss\f1\'e3o do funcion\'e1rio.
+\par \f0 
+\par \cf1\b 016 - Atributo: \cf2\b0 data_cadastro\cf1\b 
+\par \cf0\b0 Data em que o cliente foi cadastrado no sistema.
+\par 
+\par \cf1\b 017 - Atributo: \cf2\b0 data_cadastro\cf1\b 
+\par \cf0\b0 Data em que a categoria foi cadastrada
+\par 
+\par \cf1\b 018 - Atributo: \cf2\b0 data_hora\cf1\b 
+\par \cf0\b0 Data e hor\f1\'e1rio em que o pedido foi realizado.
+\par \f0 
+\par \cf1\b 019 - Atributo: \cf2\b0 data_hora_saida\cf1\b 
+\par \cf0\b0 Data e hor\f1\'e1rio em que o pedido saiu para entrega.
+\par \f0 
+\par \cf1\b 020 - Atributo: \cf2\b0 data_pagamento\cf1\b 
+\par \cf0\b0 Data e hor\f1\'e1rio em que o pagamento foi realizado.
+\par \f0 
+\par \cf1\b 021 - Atributo: \cf2\b0 data_ultima_atualiza\f1\'e7\'e3o\cf1\b 
+\par \cf0\b0\f0 Data da \f1\'faltima atualiza\'e7\'e3o dos pontos.
+\par \f0 
+\par \cf1\b 022 - Entidade: \cf2\b0 delivery\cf1\b 
+\par \cf0\b0 Armazena as informa\f1\'e7\'f5es necess\'e1rias para controlar as entregas dos pedidos.
+\par \f0 
+\par \cf1\b 023 - Atributo: \cf2\b0 delivery\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 024 - Atributo: \cf2\b0 descricao\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o da categoria.
+\par \f0 
+\par \cf1\b 025 - Atributo: \cf2\b0 descricao\cf1\b 
+\par \cf0\b0 Descri\f1\'e7\'e3o e caracter\'edsticas do produto.
+\par \f0 
+\par \cf1\b 026 - Atributo: \cf2\b0 dinheiro\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 027 - Atributo: \cf2\b0 email_cliente\cf1\b 
+\par \cf0\b0 Endere\f1\'e7o de e-mail do cliente.
+\par \f0 
+\par \cf1\b 028 - Atributo: \cf2\b0 email_contato\cf1\b 
+\par \cf0\b0 E-mail utilizado para contato com o fornecedor.
+\par 
+\par \cf1\b 029 - Atributo: \cf2\b0 endereco\cf1\b 
+\par \cf0\b0 Endere\f1\'e7o do fornecedor.
+\par \f0 
+\par \cf1\b 030 - Atributo: \cf2\b0 endereco_entrega\cf1\b 
+\par \cf0\b0 Endere\f1\'e7o onde o pedido dever\'e1 ser entregue.
+\par \f0 
+\par \cf1\b 031 - Rela\f1\'e7\'e3o: \cf2\b0 entrega\cf1\b 
+\par \cf0\b0\f0 Relaciona Categoria e Delivery. Representa a rela\f1\'e7\'e3o entre a categoria e o processo de entrega apresentado no modelo.
+\par \f0 
+\par \cf1\b 032 - Entidade: \cf2\b0 estoque\cf1\b 
+\par \cf0\b0 Armazena os dados dos insumos utilizados pela SmartCoffee e suas respectivas quantidades.
+\par 
+\par \cf1\b 033 - Atributo: \cf2\b0 forma_pagamento\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 034 - Rela\f1\'e7\'e3o: \cf2\b0 fornece\cf1\b 
+\par \cf0\b0\f0 relacionamento de estoque e fornecedor 
+\par possui cardinalidade de 1,1 e 1,1
+\par 
+\par \cf1\b 035 - Entidade: \cf2\b0 fornecedor\cf1\b 
+\par \cf0\b0 Armazena os dados dos fornecedores respons\f1\'e1veis pelo fornecimento dos insumos.
+\par \f0 
+\par \cf1\b 036 - Entidade: \cf2\b0 funcionarios\cf1\b 
+\par \cf0\b0 Armazena os dados dos funcion\f1\'e1rios respons\'e1veis pelo atendimento e registro dos pedidos.
+\par \f0 
+\par \cf1\b 037 - Rela\f1\'e7\'e3o: \cf2\b0 gera\cf1\b 
+\par \cf0\b0\f0 relacionamento de delivery e pedidos 
+\par possui cardinalidade de 1,n e 1,1
+\par 
+\par \cf1\b 038 - Atributo: \cf2\b0 historico_resgastes\cf1\b 
+\par \cf0\b0 Registro dos pontos que foram resgatados pelo cliente.
+\par 
+\par \cf1\b 039 - Atributo: \cf2\b0 id_categoria\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico da categoria. Chave prim\'e1ria.
+\par \f0 
+\par \cf1\b 040 - Atributo: \cf2\b0 id_clientes\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do cliente. Chave prim\'e1ria.
+\par \f0 
+\par \cf1\b 041 - Atributo: \cf2\b0 id_delivery\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico da entrega. Chave prim\'e1ria.
+\par \f0 
+\par \cf1\b 042 - Atributo: \cf2\b0 id_fidelidade\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do cadastro de fidelidade. Chave prim\'e1ria.
+\par \f0 
+\par \cf1\b 043 - Atributo: \cf2\b0 id_fornecedor\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do fornecedor. Chave prim\'e1ria.
+\par \f0 
+\par \cf1\b 044 - Atributo: \cf2\b0 id_funcionarios\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do funcion\'e1rio. Chave prim\'e1ria
+\par \f0 
+\par \cf1\b 045 - Atributo: \cf2\b0 id_insumo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 046 - Atributo: \cf2\b0 id_pagamentos\cf1\b 
+\par \cf0\b0 dentificador \f1\'fanico do pagamento. Chave prim\'e1ria.
+\par \f0 
+\par \cf1\b 047 - Atributo: \cf2\b0 id_pedidos\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do pedido. Chave prim\'e1ria.
+\par \f0 
+\par \cf1\b 048 - Atributo: \cf2\b0 id_produto\cf1\b 
+\par \cf0\b0 Identificador \f1\'fanico do produto. Chave prim\'e1ria.
+\par \f0 
+\par \cf1\b 049 - Atributo: \cf2\b0 kg\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 050 - Atributo: \cf2\b0 ml\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 051 - Atributo: \cf2\b0 nivel_categoria\cf1\b 
+\par \cf0\b0 Categoria ou n\f1\'edvel atual do cliente no programa.
+\par \f0 
+\par \cf1\b 052 - Atributo: \cf2\b0 nome-categoria\cf1\b 
+\par \cf0\b0 Nome da categoria.
+\par 
+\par \cf1\b 053 - Atributo: \cf2\b0 nome_cliente\cf1\b 
+\par \cf0\b0 Nome completo do cliente.
+\par 
+\par \cf1\b 054 - Atributo: \cf2\b0 nome_entregador\cf1\b 
+\par \cf0\b0 Nome do respons\f1\'e1vel pela entrega.
+\par \f0 
+\par \cf1\b 055 - Atributo: \cf2\b0 nome_funcionario\cf1\b 
+\par \cf0\b0 Nome completo do funcion\f1\'e1rio
+\par \f0 
+\par \cf1\b 056 - Atributo: \cf2\b0 nome_insumo\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 057 - Atributo: \cf2\b0 nome_produto\cf1\b 
+\par \cf0\b0 Nome do produto.
+\par 
+\par \cf1\b 058 - Atributo: \cf2\b0 obs\cf1\b 
+\par \cf0\b0 Observa\f1\'e7\'f5es adicionais relacionadas ao pedido.
+\par \f0 
+\par \cf1\b 059 - Entidade: \cf2\b0 pagamento\cf1\b 
+\par \cf0\b0 Armazena as informa\f1\'e7\'f5es referentes aos pagamentos dos pedidos.
+\par \f0 
+\par \cf1\b 060 - Rela\f1\'e7\'e3o: \cf2\b0 participa\cf1\b 
+\par \cf0\b0\f0 possui relacionamento de programa de fidelidade  e clientes
+\par possui  cardinalidade 1,1 e 1,1
+\par 
+\par \cf1\b 061 - Entidade: \cf2\b0 pedidos\cf1\b 
+\par \cf0\b0 Armazena os pedidos realizados pelos clientes na SmartCoffee.
+\par 
+\par \cf1\b 062 - Atributo: \cf2\b0 pix\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 063 - Atributo: \cf2\b0 pontos_acumulados\cf1\b 
+\par \cf0\b0 Total de pontos acumulados pelo cliente
+\par 
+\par \cf1\b 064 - Rela\f1\'e7\'e3o: \cf2\b0 possui\cf1\b 
+\par \cf0\b0\f0 relacionamento de pagamento e pedidos 
+\par possui cardinalidade de 1,1 e 1,1
+\par 
+\par \cf1\b 065 - Atributo: \cf2\b0 preco_unitario\cf1\b 
+\par \cf0\b0 Pre\f1\'e7o de venda de uma unidade do produto.
+\par \f0 
+\par \cf1\b 066 - Atributo: \cf2\b0 presencial\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 067 - Entidade: \cf2\b0 produto\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 068 - Entidade: \cf2\b0 programa_de_fidelidade\cf1\b 
+\par \cf0\b0 Armazena as informa\f1\'e7\'f5es referentes ao programa de fidelidade dos clientes.
+\par \f0 
+\par \cf1\b 069 - Atributo: \cf2\b0 quantidade_atual\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 070 - Atributo: \cf2\b0 quantidade_atual\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 071 - Atributo: \cf2\b0 razao_social\cf1\b 
+\par \cf0\b0 Raz\f1\'e3o social da empresa fornecedora.
+\par \f0 
+\par \cf1\b 072 - Rela\f1\'e7\'e3o: \cf2\b0 realiza\cf1\b 
+\par \cf0\b0\f0 Relaciona Clientes e Pedidos. Um cliente pode realizar v\f1\'e1rios pedidos, enquanto cada pedido pertence a um \'fanico cliente.
+\par possui cadinalidade 1,n e 1,1
+\par \f0 
+\par \cf1\b 073 - Atributo: \cf2\b0 salario\cf1\b 
+\par \cf0\b0 Sal\f1\'e1rio do funcion\'e1rio.
+\par \f0 
+\par \cf1\b 074 - Atributo: \cf2\b0 saldo_pontos\cf1\b 
+\par \cf0\b0 Quantidade atual de pontos do cliente.
+\par 
+\par \cf1\b 075 - Atributo: \cf2\b0 setor_cafeteria\cf1\b 
+\par \cf0\b0 Setor da cafeteria relacionado \f1\'e0 categoria.
+\par \f0 
+\par \cf1\b 076 - Atributo: \cf2\b0 status_ativo\cf1\b 
+\par \cf0\b0 Indica se a categoria est\f1\'e1 ativa.
+\par \f0 
+\par \cf1\b 077 - Atributo: \cf2\b0 status_entrerga\cf1\b 
+\par \cf0\b0 Situa\f1\'e7\'e3o atual da entrega.
+\par \f0 
+\par \cf1\b 078 - Atributo: \cf2\b0 status_pagamento\cf1\b 
+\par \cf0\b0 Situa\f1\'e7\'e3o do pagamento.
+\par \f0 
+\par \cf1\b 079 - Atributo: \cf2\b0 status_pedido\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 080 - Atributo: \cf2\b0 status_produto\cf1\b 
+\par \cf0\b0 Indica se o produto est\f1\'e1 ativo ou inativo.
+\par \f0 
+\par \cf1\b 081 - Atributo: \cf2\b0 taxa_entrega\cf1\b 
+\par \cf0\b0 Valor cobrado pela entrega.
+\par 
+\par \cf1\b 082 - Atributo: \cf2\b0 telefone_cliente\cf1\b 
+\par \cf0\b0 N\f1\'famero de telefone para contato.
+\par \f0 
+\par \cf1\b 083 - Atributo: \cf2\b0 telefone_contato\cf1\b 
+\par \cf0\b0 Telefone utilizado para contato com o fornecedor.
+\par 
+\par \cf1\b 084 - Atributo: \cf2\b0 tipo_pedido\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 085 - Atributo: \cf2\b0 un\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 086 - Atributo: \cf2\b0 unidade_medida\cf1\b 
+\par \cf0\b0 
+\par \cf1\b 087 - Rela\f1\'e7\'e3o: \cf2\b0 utiliza\cf1\b 
+\par \cf0\b0\f0 relacionamento de estoque com produtos 
+\par possui cardinalidade de 1,n e 1,n
+\par 
+\par \cf1\b 088 - Atributo: \cf2\b0 valor_pago\cf1\b 
+\par \cf0\b0 Valor pago pelo cliente.
+\par 
+\par \cf1\b 089 - Atributo: \cf2\b0 valor_total\cf1\b 
+\par \cf0\b0 Valor total do pedido.
+\par 
+\par 
+\par }
+ 
