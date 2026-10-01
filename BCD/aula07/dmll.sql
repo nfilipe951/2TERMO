@@ -115,12 +115,6 @@ SELECT * FROM PAGAMENTO;
 
 
 
-
-
-
-
-
-
 INSERT INTO pedido (DATA_PEDIDO, status_pedido, valor_total, id_cliente) VALUES (now(), 'ABERTO','0.00',1);
 SET @pedido = LAST_INSERT_ID();
 SELECT @pedido
@@ -193,4 +187,105 @@ where cidade = "Chicago";
 UPDATE cliente
 SET ativo = FALSE
 WHERE id_cliente = 10;
+
+
+
+
+set ativo = FALSE
+where id_cliente = 10;
+
+select * from cliente;
+
+--transsações - segurança para DML
+START TRANSACTION;
+UPDATE produto
+set preco = preco * 2.80
+where id_categoria = 1;
+
+select ID_PRODUTO, nome, preco 
+from prduto 
+WHERE id_categoria = 1;
+
+
+
+--DEFAZ O QUE FIZEMOS ERRADO OU VOLTA UMA TRANSAÇÃO
+ROLLBACK;
+
+
+--VALIDA O PROCEDIMENTO DE TRANSAÇÃO
+COMMIT;
+
+
+START TRANSACTION;
+UPDATE CLIENTE SET CIDADE = 'SANTOS' WHERE ID_CLIENTE = 121;
+
+
+SELECT * FROM WHERE ID_CLIENTE =121;
+COMMIT;
+ROLLBACK;
+
+
+
+
+
+
+
+
+
+
+
+--PROCEDIMENTO DE UMA COMPRA
+
+--passo 1: realizar cadastro cliente
+INSERT INTO CLIENTE (nome,email,telefone,cidade,ativo) ('Carlos Silva', 'carlos.silva@email.com', '199999999', 'Santos', TRUE);
+
+SET @cliente_compra = last_insert_id();
+
+--passo 2: realiza pedido
+
+INSERT INTO pedido (data_pedido, status, `VALOR_TOTAL`,`ID_CLIENTE`) VALUES (now(), 'ABERTO',0.00,@cliente_compra);
+
+set @pedido_compra = last_insert_id();
+
+--passo 3 Inser itens
+
+insert into item_pedido (id_pedid, id_produto,`QUANTIDADE`,`PRECO_UNITARIO`) values (@pedido_compra,4,1,13.00), (@pedido_compra,9,1,9.00);
+
+
+--passo 4 : atualizando total e status
+update pedido
+SET `VALOR_TOTAL`= 22.00,
+    status = 'PREPARANDO'
+WHERE `ID_PEDIDO` = '@pedido_compra';
+
+--passo 5: resgistrar pagamento
+
+INSERT into pagamento (`ID_PEDIDO`, `ID_FORMA_PAGAMENTO`, `VALOR`, `DATA_PAGAMENTO`) VALUES (@pedido_compra,2,22.00, NOW());
+
+
+--passo 6: consultar pedido e resultado
+
+SELECT p.id_pedido,
+         c.nome AS cliente,
+         p.status,
+         p.valor_total
+From pedido p 
+join cliente c ON c.`ID_CLIENTE` = p.`ID_CLIENTE`
+where p.id_pedido = @pedido_compra;
+
+
+-- passo 7: relatorio
+
+--passo 1
+select nome from cliente where id_cliente = @cliente_compra;
+
+select nome from cliente where id_cliente = 121;
+
+
+
+--passo 2:
+select nome from cliente where id_cliente = @pedido_compra;
+
+
+
 
