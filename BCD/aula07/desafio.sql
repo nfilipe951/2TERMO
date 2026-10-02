@@ -191,5 +191,11 @@ SELECT * FROM CATEGORIA WHERE nome = 'Excluir Depois';
 DELETE FROM CATEGORIA WHERE nome = 'Excluir Depois';
 
 
+--PARTE D
+
+--17.
+ 
+
+
 
 

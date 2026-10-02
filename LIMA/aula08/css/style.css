@@ -1,0 +1,318 @@
+/* ==========================================
+   00. RESET E ESTILOS GERAIS
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Subtítulos em caixa alta na cor dourada/laranja */
+.banner-conteudo p:first-of-type,
+.sobre-cabecalho p,
+.secao-cabecalho p,
+.ambiente-conteudo p:first-of-type,
+.contato-cabecalho p {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #c87a28;
+  margin-bottom: 8px;
+}
+
+h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 12px; color: #222; }
+h2 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 12px; }
+
+/* Botões Reutilizáveis */
+a[href], button {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.banner-conteudo a,
+.ambiente-conteudo a,
+header nav ul li a[href="#cardapio"],
+.contato form button {
+  background-color: #c87a28;
+  color: #ffffff;
+}
+
+.sobre a {
+  border: 1px solid #c87a28;
+  color: #c87a28;
+  background-color: transparent;
+}
+
+
+/* ==========================================
+   ETAPA 01 — CABEÇALHO (Flexbox Logo e Menu)
+   ========================================== */
+header {
+  display: flex;                /* Flexbox: alinha logo e navegação */
+  justify-content: space-between; /* Espaço entre logo e menu */
+  align-items: center;          /* Centralização vertical */
+  padding: 15px 8%;
+  background-color: #2b1a13;    /* Fundo castanho escuro */
+}
+
+header > a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Itens do Menu (Lado a lado) */
+header nav ul {
+  display: flex;                /* Flexbox: itens do menu em linha */
+  align-items: center;
+  gap: 20px;                    /* Espaço entre os links */
+  list-style: none;
+}
+
+header nav ul li a {
+  color: #d1c7bd;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+
+/* ==========================================
+   ETAPA 02 — BANNER [ TEXTO ] [ IMAGEM ]
+   ========================================== */
+.banner {
+  display: flex;                /* Flexbox: 2 áreas em linha */
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  background-color: #f7ece1;    /* Fundo bege claro */
+  gap: 40px;
+}
+
+.banner-conteudo, 
+.banner-imagem {
+  flex: 1;                      /* Divide o espaço igualmente em 50% */
+}
+
+.banner-conteudo p:nth-of-type(2) {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   ETAPA 03 — SOBRE [ IMAGEM ] [ CONTEÚDO ]
+   ========================================== */
+.sobre {
+  display: flex;                /* Flexbox: 2 áreas em linha */
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  background-color: #ffffff;    /* Fundo branco */
+  gap: 40px;
+}
+
+.sobre-imagem, 
+.sobre-cabecalho {
+  flex: 1;                      /* Divide o espaço igualmente */
+}
+
+.sobre p:last-of-type {
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   ETAPA 04 — CAFÉS [ CARD 01 ] [ CARD 02 ] [ CARD 03 ]
+   ========================================== */
+.cafes {
+  padding: 60px 8%;
+  background-color: #f7ece1;    /* Fundo bege claro */
+  text-align: center;
+}
+
+.secao-cabecalho {
+  margin-bottom: 30px;
+}
+
+.lista-cafes {
+  display: flex;                /* Flexbox: organiza os cards lado a lado */
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+}
+
+.lista-cafes li {
+  flex: 1;                      /* Garante largura igual para os 3 cards */
+}
+
+.card-cafe {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 0 0 20px 0;
+  text-align: left;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.card-cafe img {
+  border-radius: 12px 12px 0 0;
+  width: 100%;
+  height: 180px;
+}
+
+.card-cafe h3 {
+  font-size: 1rem;
+  margin: 15px 15px 5px 15px;
+}
+
+.card-cafe p {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0 15px 15px 15px;
+  text-transform: none;
+}
+
+.card-cafe strong {
+  display: block;
+  font-size: 1rem;
+  margin: 0 15px;
+  color: #000;
+}
+
+
+/* ==========================================
+   ETAPA 05 — AMBIENTE [ CONTEÚDO ] [ IMAGEM ]
+   ========================================== */
+.ambiente {
+  display: flex;                /* Flexbox: 2 áreas em linha */
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 8%;
+  background-color: #3b2219;    /* Fundo castanho escuro */
+  color: #ffffff;
+  gap: 40px;
+}
+
+.ambiente-conteudo, 
+.ambiente-imagem {
+  flex: 1;                      /* Divide o espaço igualmente */
+}
+
+.ambiente-conteudo h2 {
+  color: #ffffff;
+}
+
+.ambiente-conteudo p:nth-of-type(2) {
+  color: #d1c7bd;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+
+/* ==========================================
+   CONTATO E FORMULÁRIO (Flexbox Lado a Lado)
+   ========================================== */
+.contato {
+  display: flex;                /* Flexbox: Texto à esquerda, Form à direita */
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 60px 8%;
+  background-color: #ffffff;
+  gap: 40px;
+}
+
+.contato-cabecalho {
+  flex: 1;
+}
+
+.contato-cabecalho p:last-of-type {
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: none;
+}
+
+.contato form {
+  flex: 1;
+  display: flex;                /* Flexbox: Campos empilhados em coluna */
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contato form label {
+  display: none;                /* Oculto conforme a imagem */
+}
+
+.contato form input,
+.contato form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.contato form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.contato form button {
+  border-radius: 6px;
+  padding: 12px;
+  width: 100%;
+}
+
+
+/* ==========================================
+   RODAPÉ (Flexbox Lado a Lado)
+   ========================================== */
+footer {
+  display: flex;                /* Flexbox: Logo, Redes e Copyright */
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  background-color: #2b1a13;
+  color: #ffffff;
+}
+
+footer p {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+footer nav ul {
+  display: flex;                /* Flexbox: Links das redes em linha */
+  gap: 20px;
+  list-style: none;
+}
+
+footer nav ul li a {
+  color: #d1c7bd;
+  text-decoration: none;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,40 @@
+.equipe {
+    display: flex;
+}
+
+.equipee {
+  display: flex;
+  gap: 30px;
+}
+
+.teste1 {
+      justify-content: flex-start;
+    justify-content: center;
+   justify-content: flex-end;
+   justify-content: space-between;
+  justify-content: space-evenly;
+}
+
+
+
+
+.teste2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.teste3{
+  display: flex;
+  justify-content: center;
+}
+
+.teste4{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.cards {
+display: flex;
+gap: 20px;
+}
