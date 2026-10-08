@@ -216,3 +216,58 @@ from pedido;
 select nome, COALESCE(telefone, 'Não Informado') as telefone
 from cliente;
 
+--ex 14: funções de agrupamento
+--count - contar quantos registro existem
+--sum - soma de valores 
+--avg- média  de valores 
+--min - menor valor 
+--max - maior valor 
+
+select count (*) as total_clientes
+FROM cliente;
+--contar quantos clientes existem
+
+select avg (preco) as round (média_produtos, 2)
+from produto;
+--calcular media de preço dos produtos
+
+select min (preco) as menor_preço, MAX(preco) AS maior_preco, avg(preco) as média_preço
+from produto
+--resumo de preços
+
+
+select sum(valor_total) as faturamento_mensal
+from pedido
+where status ='FINALIZADO';
+
+
+--ex 15: group by - agrupar dados
+
+select cidade, count(*) as quantidade_clientes
+from cliente
+group by cidade;
+
+select id_categoria, count(*) as quantidade_produtos
+from produto
+group by `ID_CATEGORIA`;
+
+ex 16: having - filtro por grupos
+where - filtra linhas antes do group by
+having - filtra depois do group by 
+
+select cidade, count(*) as qtde_clientes 
+from cliente
+group by `CIDADE`
+having count(*) >= 2;
+--cidades com pelo menos dois clientes 
+
+
+--ex 17: ordem de criação de uma consulta completa 
+select colunas 
+from tabela
+where condicao
+group by colunas_agrupar
+having condicao_agrupar
+order by colunas 
+LIMIT quantidade;
+
