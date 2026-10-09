@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 body {
@@ -14,18 +14,15 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: cover; /* ESSENCIAL: Preenche o contentor proporcionalmente */
 }
 
-/* Subtítulos em caixa alta na cor dourada/laranja */
-.banner-conteudo p:first-of-type,
-.sobre-cabecalho p,
-.secao-cabecalho p,
-.ambiente-conteudo p:first-of-type,
-.contato-cabecalho p {
+/* Subtítulos (Taglines) */
+.tagline,
+.tagline-light {
   text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 700;
@@ -34,67 +31,98 @@ img {
   margin-bottom: 8px;
 }
 
-h1 { font-size: 2.2rem; line-height: 1.2; margin-bottom: 12px; color: #222; }
-h2 { font-size: 1.8rem; line-height: 1.2; margin-bottom: 12px; }
+.tagline-light {
+  color: #e09e53;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: #222222;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
 
 /* Botões Reutilizáveis */
-a[href], button {
+a[class^="btn"],
+.btn-form {
   display: inline-block;
   padding: 10px 22px;
   border-radius: 20px;
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, background-color 0.2s;
   border: none;
   cursor: pointer;
+  text-align: center;
 }
 
-.banner-conteudo a,
-.ambiente-conteudo a,
-header nav ul li a[href="#cardapio"],
-.contato form button {
+.btn-principal,
+.btn-cardapio,
+.btn-form {
   background-color: #c87a28;
   color: #ffffff;
 }
 
-.sobre a {
+.btn-outline {
   border: 1px solid #c87a28;
   color: #c87a28;
   background-color: transparent;
 }
 
-
-/* ==========================================
-   ETAPA 01 — CABEÇALHO (Flexbox Logo e Menu)
-   ========================================== */
-header {
-  display: flex;                /* Flexbox: alinha logo e navegação */
-  justify-content: space-between; /* Espaço entre logo e menu */
-  align-items: center;          /* Centralização vertical */
-  padding: 15px 8%;
-  background-color: #2b1a13;    /* Fundo castanho escuro */
+.btn-principal:hover,
+.btn-cardapio:hover,
+.btn-form:hover {
+  opacity: 0.9;
 }
 
-header > a {
+
+/* ==========================================
+   ETAPA 01 — CABEÇALHO (Grid Responsivo)
+   ========================================== */
+.cabecalho-principal {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 15px 8%;
+  background-color: #2b1a13;
+  gap: 20px;
+}
+
+.logo {
   color: #ffffff;
   font-size: 1.3rem;
   font-weight: 700;
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Itens do Menu (Lado a lado) */
-header nav ul {
-  display: flex;                /* Flexbox: itens do menu em linha */
+.cabecalho-principal nav ul {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
   align-items: center;
-  gap: 20px;                    /* Espaço entre os links */
+  gap: 20px;
   list-style: none;
 }
 
-header nav ul li a {
+.cabecalho-principal nav ul li a {
   color: #d1c7bd;
   text-decoration: none;
   font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.cabecalho-principal nav ul li a:hover {
+  color: #ffffff;
 }
 
 
@@ -102,21 +130,16 @@ header nav ul li a {
    ETAPA 02 — BANNER [ TEXTO ] [ IMAGEM ]
    ========================================== */
 .banner {
-  display: flex;                /* Flexbox: 2 áreas em linha */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-content: space-between;
   padding: 60px 8%;
-  background-color: #f7ece1;    /* Fundo bege claro */
+  background-color: #f7ece1;
   gap: 40px;
 }
 
-.banner-conteudo, 
-.banner-imagem {
-  flex: 1;                      /* Divide o espaço igualmente em 50% */
-}
-
-.banner-conteudo p:nth-of-type(2) {
-  color: #666;
+.banner-conteudo .descricao {
+  color: #666666;
   margin-bottom: 20px;
 }
 
@@ -125,32 +148,27 @@ header nav ul li a {
    ETAPA 03 — SOBRE [ IMAGEM ] [ CONTEÚDO ]
    ========================================== */
 .sobre {
-  display: flex;                /* Flexbox: 2 áreas em linha */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-content: space-between;
   padding: 60px 8%;
-  background-color: #ffffff;    /* Fundo branco */
+  background-color: #ffffff;
   gap: 40px;
 }
 
-.sobre-imagem, 
-.sobre-cabecalho {
-  flex: 1;                      /* Divide o espaço igualmente */
-}
-
-.sobre p:last-of-type {
-  color: #555;
+.sobre .descricao {
+  color: #555555;
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
 
 /* ==========================================
-   ETAPA 04 — CAFÉS [ CARD 01 ] [ CARD 02 ] [ CARD 03 ]
+   ETAPA 04 — CAFÉS / PRODUTOS (Auto-fit)
    ========================================== */
 .cafes {
   padding: 60px 8%;
-  background-color: #f7ece1;    /* Fundo bege claro */
+  background-color: #f7ece1;
   text-align: center;
 }
 
@@ -159,74 +177,66 @@ header nav ul li a {
 }
 
 .lista-cafes {
-  display: flex;                /* Flexbox: organiza os cards lado a lado */
-  justify-content: space-between;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Ajustado para cartões maiores */
+  gap: 24px;
   list-style: none;
-}
-
-.lista-cafes li {
-  flex: 1;                      /* Garante largura igual para os 3 cards */
 }
 
 .card-cafe {
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 0 0 20px 0;
+  padding-bottom: 20px;
   text-align: left;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
 }
 
 .card-cafe img {
   border-radius: 12px 12px 0 0;
   width: 100%;
-  height: 180px;
+  height: 220px; /* Altura fixa maior para os cartões */
 }
 
 .card-cafe h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin: 15px 15px 5px 15px;
 }
 
 .card-cafe p {
-  font-size: 0.8rem;
-  color: #666;
+  font-size: 0.85rem;
+  color: #666666;
   margin: 0 15px 15px 15px;
-  text-transform: none;
 }
 
 .card-cafe strong {
-  display: block;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin: 0 15px;
-  color: #000;
+  color: #000000;
 }
 
 
 /* ==========================================
    ETAPA 05 — AMBIENTE [ CONTEÚDO ] [ IMAGEM ]
-   ========================================== */
+   ========================================= = */
 .ambiente {
-  display: flex;                /* Flexbox: 2 áreas em linha */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-content: space-between;
   padding: 60px 8%;
-  background-color: #3b2219;    /* Fundo castanho escuro */
+  background-color: #3b2219;
   color: #ffffff;
   gap: 40px;
-}
-
-.ambiente-conteudo, 
-.ambiente-imagem {
-  flex: 1;                      /* Divide o espaço igualmente */
 }
 
 .ambiente-conteudo h2 {
   color: #ffffff;
 }
 
-.ambiente-conteudo p:nth-of-type(2) {
+.ambiente-conteudo .descricao-light {
   color: #d1c7bd;
   margin-bottom: 20px;
   line-height: 1.5;
@@ -234,36 +244,26 @@ header nav ul li a {
 
 
 /* ==========================================
-   CONTATO E FORMULÁRIO (Flexbox Lado a Lado)
-   ========================================== */
+   ETAPA 06 — CONTATO E FORMULÁRIO
+   ========================================= = */
 .contato {
-  display: flex;                /* Flexbox: Texto à esquerda, Form à direita */
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   padding: 60px 8%;
   background-color: #ffffff;
   gap: 40px;
 }
 
-.contato-cabecalho {
-  flex: 1;
-}
-
-.contato-cabecalho p:last-of-type {
-  color: #666;
+.contato-cabecalho .descricao {
+  color: #666666;
   font-size: 0.9rem;
-  text-transform: none;
 }
 
 .contato form {
-  flex: 1;
-  display: flex;                /* Flexbox: Campos empilhados em coluna */
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 12px;
-}
-
-.contato form label {
-  display: none;                /* Oculto conforme a imagem */
 }
 
 .contato form input,
@@ -277,7 +277,7 @@ header nav ul li a {
 }
 
 .contato form textarea {
-  height: 80px;
+  height: 100px;
   resize: vertical;
 }
 
@@ -289,10 +289,11 @@ header nav ul li a {
 
 
 /* ==========================================
-   RODAPÉ (Flexbox Lado a Lado)
-   ========================================== */
+   ETAPA 07 — RODAPÉ
+   ========================================= = */
 footer {
-  display: flex;                /* Flexbox: Logo, Redes e Copyright */
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
   padding: 25px 8%;
@@ -300,19 +301,79 @@ footer {
   color: #ffffff;
 }
 
-footer p {
+footer .logo-footer {
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
 }
 
-footer nav ul {
-  display: flex;                /* Flexbox: Links das redes em linha */
+footer .redes-sociais {
+  display: grid;
+  grid-auto-flow: column;
   gap: 20px;
-  list-style: none;
 }
 
-footer nav ul li a {
+footer .redes-sociais a {
   color: #d1c7bd;
   text-decoration: none;
   font-size: 0.8rem;
+  transition: color 0.2s;
+}
+
+footer .redes-sociais a:hover {
+  color: #ffffff;
+}
+
+
+/* ==========================================
+   ETAPA 08 — MEDIA QUERIES (RESPONSIVIDADE)
+   ========================================= = */
+
+/* Tablets e Ecrãs Médios (<= 768px) */
+@media (max-width: 768px) {
+  .cabecalho-principal {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .cabecalho-principal nav ul {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  .banner,
+  .sobre,
+  .ambiente,
+  .contato {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+
+  /* Inverter ordem para a imagem ficar acima em Mobile no Sobre */
+  .sobre .sobre-imagem {
+    grid-row: 1;
+  }
+
+  /* Ajustar altura das imagens dos cartões para Mobile */
+  .card-cafe img {
+    height: 180px;
+  }
+}
+
+/* Telemóveis (<= 480px) */
+@media (max-width: 480px) {
+  .cabecalho-principal nav ul {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 15px;
+    text-align: center;
+  }
 }

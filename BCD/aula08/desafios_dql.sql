@@ -53,7 +53,9 @@ where nome like '%Café%';
 
 -- 9. Liste os clientes que não informaram telefone.
 
-select * from cliente where telefone is null;
+select *
+ from cliente 
+ where telefone is null;
 
 -- 10. Mostre os pedidos FINALIZADOS com valor acima de R$ 20,00,
 --     do maior para o menor valor.

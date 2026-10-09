@@ -1,0 +1,55 @@
+
+/* 1 */
+/* .grid. {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+} */
+
+
+/* 2 */
+/* .grid. {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+
+
+/* 3 */
+ /* .grid. {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+} */
+
+
+/* 4 */
+/* .grid. {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+} */
+
+
+/* 5 */
+/* .grid. {
+  display: grid;
+  grid-template-columns: 1fr;
+} */
+
+/* @media (min-width: 600px) {
+  .grid. {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} */
+
+/* @media (min-width: 1024px) {
+  .grid. {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+
+
+
+/* 6 */
+/* 
+.grid. {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+} */
