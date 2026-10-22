@@ -80,9 +80,135 @@ UPDATE LIVROO SET quantidade_disponivel = quantidade_disponivel + 2 WHERE ano_pu
 
 INSERT INTO USUARIO (nome, email, telefone) VALUES ('Usuário Teste', 'teste@email.com', '19900000000');
 
+
 DELETE FROM USUARIO WHERE email = 'teste@email.com';
 
-
-
 --3---------------------------------------------------------------------------------------
+
+SELECT titulo, autor, quantidade_disponivel FROM livroo;
+
+
+SELECT * FROM livroo 
+WHERE quantidade_disponivel > 2 
+ORDER BY quantidade_disponivel DESC;
+
+
+SELECT * FROM livroo 
+WHERE titulo LIKE '%Algoritmos%';
+
+SELECT * FROM livroo 
+WHERE ano_publicacao BETWEEN 2015 AND 2025;
+
+
+SELECT 
+    COUNT(*) AS total_livros,
+    SUM(quantidade_disponivel) AS total_exemplares,
+    AVG(quantidade_disponivel) AS media_exemplares,
+    MIN(quantidade_disponivel) AS menor_estoque,
+    MAX(quantidade_disponivel) AS maior_estoque
+FROM livroo;
+
+
+SELECT 
+    E.id_emprestimo,
+    U.nome AS usuario,
+    L.titulo AS livroo,
+    E.data_emprestimo,
+    E.status_emprestimo
+FROM EMPRESTIMO E
+INNER JOIN USUARIO U ON E.id_usuario = U.id_usuario
+INNER JOIN LIVRO L ON E.id_livro = L.id_livro;
+
+
+SELECT 
+    E.id_emprestimo,
+    U.nome AS usuario,
+    L.titulo AS livroo,
+    E.data_emprestimo,
+    E.status_emprestimo
+FROM EMPRESTIMO E
+INNER JOIN USUARIO U ON E.id_usuario = U.id_usuario
+INNER JOIN livroo L ON E.id_livro = L.id_livro
+WHERE E.status_emprestimo = 'ABERTO';
+
+
+SELECT 
+    U.nome AS usuario,
+    COUNT(E.id_emprestimo) AS total_emprestimos
+FROM USUARIO U
+INNER JOIN EMPRESTIMO E ON U.id_usuario = E.id_usuario
+GROUP BY U.id_usuario, U.nome
+ORDER BY total_emprestimos DESC;
+
+
+SELECT 
+    U.nome AS usuario,
+    COUNT(E.id_emprestimo) AS total_emprestimos
+FROM USUARIO U
+LEFT JOIN EMPRESTIMO E ON U.id_usuario = E.id_usuario
+GROUP BY U.id_usuario, U.nome
+ORDER BY total_emprestimos DESC;
+
+
+--4------------------------------------------------------------------------------------
+
+
+
+START TRANSACTION;
+
+
+INSERT INTO EMPRESTIMO (data_prevista, status_emprestimo, id_usuario, id_livro) 
+VALUES ('2026-11-15', 'ABERTO', 4, 2);
+    
+
+   
+UPDATE livroo 
+SET quantidade_disponivel = quantidade_disponivel - 1 
+WHERE id_livro = 2;
+
+
+SELECT * FROM EMPRESTIMO WHERE id_usuario = 4 AND id_livro = 2;
+SELECT id_livro, titulo, quantidade_disponivel FROM LIVRO WHERE id_livro = 2;
+COMMIT; 
+
+
+START TRANSACTION;
+
+UPDATE livroo SET quantidade_disponivel = 99 WHERE id_livro = 1;
+
+
+SELECT id_livro, titulo, quantidade_disponivel FROM LIVRO WHERE id_livro = 1;
+ROLLBACK;
+
+
+SELECT id_livro, titulo, quantidade_disponivel FROM LIVRO WHERE id_livro = 1;
+
+
+START TRANSACTION;
+
+UPDATE livroo SET quantidade_disponivel = quantidade_disponivel + 1 WHERE id_livro = 1;
+    
+SAVEPOINT savepoint1;
+
+
+ 
+
+-- 8 
+
+
+--Uma análise técnica é como garantir a segurança dos dados em um sistema de biblioteca que vai usar as ferramentas do banco de dados 
+
+--Evitar cadastros que existe e o unique impede que dois usuários tenham mesmo email ou que dois livros tenham o mesmo isbn , porque o banco não aceita duplicações.
+--Protege contra valores negativos e o chek impede que a quantidade de livros fique abaixo de zero
+
+--O foreing key vai garantir que um empréstimo seja feito para um usuário que exista e do mesmo jeito o on delet restrict vai impedir que um livro seja apagado se ele ainda tiver um histórico de empréstimos
+
+--As operações completas e seguras como o COMMIT e o ROLLBACK faz com que ao  tentar registrar um empréstimo e atualizar o estoque, ou os dois ser feitos, ou nada vai ser gravado no banco de dados
+
+-- Um controle de regras do negócio  é impedir a criação de empréstimo quando o estoque chegar a zero é responsabilidade que  vai validar antes de gravar 
+
+ 
+
+
+
 
