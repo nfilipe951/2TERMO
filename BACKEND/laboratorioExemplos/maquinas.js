@@ -1,6 +1,0 @@
-[
-{ "id": 1, "nome": "Esteira A", "setor": "Montagem", "status": "Ativa" },
-{ "id": 2, "nome": "Prensa B", "setor": "Estamparia", "status": "Manutenção" },
-{ "id": 3, "nome": "Torno C", "setor": "Usinagem", "status": "Ativa" },
-{ "id": 4, "nome": "Fresa D", "setor": "Usinagem", "status": "Manutenção" }
-]
