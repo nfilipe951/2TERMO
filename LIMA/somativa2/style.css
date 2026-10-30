@@ -1,0 +1,427 @@
+:root {
+    --fundo: #090A16;
+    --fundo-2: #101225;
+    --painel: #171A31;
+
+    --texto: #FFF7E6;
+    --texto-suave: #C7CADB;
+
+    --magenta: #FF3D81;
+    --ciano: #18D9FF;
+    --amarelo: #FFD84D;
+    --roxo: #6D4AFF;
+    --laranja: #FF7A33;
+
+    --borda: rgba(255, 255, 255, 0.12);
+    --sombra: 0 28px 70px rgba(0, 0, 0, 0.34);
+    --raio: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img .pt1{
+    display: flex;
+    align-items: end;
+    
+    
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* CABEÇALHO */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: var(--fundo);
+    border-bottom: 1px solid var(--borda);
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--texto);
+}
+
+header h1 span {
+    color: var(--magenta);
+    margin-left: 4px;
+}
+
+header nav .links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header nav .links a {
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+header nav .links a:hover {
+    color: var(--texto);
+}
+
+.botaosobre {
+    background: transparent;
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 0.4rem 1.2rem;
+    cursor: pointer;
+}
+
+.botaosobre a {
+    color: var(--texto) !important;
+}
+
+
+
+/* pt1 */
+
+.pt1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 5%;
+    min-height: 70vh;
+    background: radial-gradient(circle at 80% 50%, rgba(109, 74, 255, 0.15), transparent 50%);
+    position: relative;
+}
+
+.pt1 p span {
+    color: var(--ciano);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.pt1 h1 {
+    font-size: 3.5rem;
+    max-width: 600px;
+    line-height: 1.1;
+    margin: 1rem 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--texto);
+}
+
+.pt1 p {
+    color: var(--texto-suave);
+    max-width: 450px;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.play {
+    background-color: var(--magenta);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: var(--raio);
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.play a {
+    color: var(--texto);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.play:hover {
+    transform: translateY(-2px);
+    background-color: #e02f6f;
+}
+
+/* pt2 */
+.pt2 {
+    padding: 5rem 5%;
+    background-color: var(--fundo-2);
+}
+
+.pt2 > p span {
+    color: var(--ciano);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pt2 > h1 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: var(--texto);
+}
+
+.pt2 > p {
+    color: var(--texto-suave);
+    max-width: 500px;
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+}
+
+.filmesclassico, .filmeclassico {
+    display: inline-block;
+    width: 47%;
+    margin-right: 4%;
+    background-color: var(--painel);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 1.5rem;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.filmeclassico {
+    margin-right: 0;
+}
+
+.filmesclassico img, .filmeclassico img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.filmesclassico p span, .filmeclassico p span {
+    color: var(--amarelo);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.filmesclassico h4, .filmeclassico h4 {
+    margin-top: 0.3rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    color: var(--texto);
+}
+
+/* pt3 */
+.pt3 {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: var(--fundo);
+}
+
+.pt3 p span {
+    color: var(--ciano);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.pt3 h1 {
+    font-size: 2.2rem;
+    margin: 0.5rem 0;
+    color: var(--texto);
+}
+
+.pt3 > p {
+    color: var(--texto-suave);
+    margin-bottom: 3rem;
+    font-size: 0.9rem;
+}
+
+.hclassicos {
+    display: inline-block;
+    width: 31%;
+    margin-right: 3%;
+    background-color: var(--painel);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 1.2rem;
+    text-align: left;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.hclassicos:last-child {
+    margin-right: 0;
+}
+
+.hclassicos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+}
+
+.hclassicos p span {
+    color: var(--ciano);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.hclassicos h4 {
+    margin-top: 0.2rem;
+    font-size: 1.1rem;
+    color: var(--texto);
+}
+
+/* pt4 */
+.pt4 {
+    padding: 5rem 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--fundo-2);
+}
+
+.pt4 > p span {
+    color: var(--ciano);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.pt4 > h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--texto);
+}
+
+.xmen, .simpsons, .gravityfalls {
+    display: flex;
+    align-items: center;
+    background-color: var(--painel);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 1.5rem;
+    gap: 1.5rem;
+}
+
+.xmen img, .simpsons img, .gravityfalls img {
+    width: 250px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.xmen h3:first-of-type, .simpsons h3:first-of-type, .gravityfalls h3:first-of-type {
+    font-size: 2rem;
+    color: var(--magenta);
+}
+
+.xmen p span, .simpsons p span, .gravityfalls p span {
+    color: var(--ciano);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.simpsons {
+    flex-direction: row-reverse;
+}
+
+/* SEÇÃO DEGRADÊ / FINAL */
+.semsentido {
+    background: linear-gradient(135deg, var(--roxo), var(--magenta));
+    padding: 6rem 2rem;
+    text-align: center;
+    color: var(--texto);
+}
+
+.semsentido p span {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.semsentido h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin: 0.5rem 0;
+}
+
+.semsentido p:last-child {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* RODAPÉ */
+.rodape {
+    padding: 3rem 5%;
+    background-color: var(--fundo);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--borda);
+}
+
+.rodape h1 {
+    font-size: 1.2rem;
+    color: var(--texto);
+}
+
+.rodape h1 span {
+    color: var(--magenta);
+}
+
+.rodape > p {
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+.redes_sociais {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.redes_sociais li {
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.redes_sociais li:hover {
+    color: var(--texto);
+}
+
+.rodape > p:last-child {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    font-style: normal;
+    color: var(--texto-suave);
+}
+
+@media (max-width: 768px) {
+    .hero, .grid-2, .grid-3, .release-row, .release-row.reverse {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+    .release-box {
+        width: 100%;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+} 
