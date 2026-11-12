@@ -10,7 +10,7 @@ WHERE ativo = TRUE;
 
 SELECT *
 FROM vw_produtos_ativos
-WHERE preco > 10.00;
+WHERE preco >+ 10.00;
 
 
 -- 3. Listar todas as views do banco
@@ -90,5 +90,3 @@ ON pr.id_produto = ip.id_produto
 GROUP BY
 pr.id_produto,
 pr.nome;
-
-
